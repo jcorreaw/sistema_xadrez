@@ -31,6 +31,7 @@ public class Main {
 
                 System.out.println();
                 System.out.println();
+                System.out.println();
                 System.out.print("Destino: ");
                 PosicaoXadrez destino = UI.lerPosicaoXadrez(sc);
 
