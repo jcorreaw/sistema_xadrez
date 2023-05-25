@@ -30,6 +30,7 @@ public class Main {
                 UI.mostraTabuleiro(partidaDeXadrez.getPecas(), movimentoPossivel);
 
                 System.out.println();
+                System.out.println();
                 System.out.print("Destino: ");
                 PosicaoXadrez destino = UI.lerPosicaoXadrez(sc);
 
