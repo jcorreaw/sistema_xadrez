@@ -5,10 +5,7 @@ import xadrez.PartidaDeXadrez;
 import xadrez.PecasDeXadrez;
 import xadrez.PosicaoXadrez;
 
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -38,6 +35,13 @@ public class Main {
                 if (pecaCapturada != null){
                     capturada.add(pecaCapturada);
                 }
+
+                if (partidaDeXadrez.getPromocaoDoPeao() != null){
+                    System.out.print("Entre com a letra da nova peça para promoção(B, C, R, Q): ");
+                    String tipo = sc.nextLine();
+                    partidaDeXadrez.trocaPecaPromocao(tipo);
+                }
+
 
             }
             catch (ExceptionXadrez e) {
