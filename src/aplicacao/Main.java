@@ -5,6 +5,7 @@ import xadrez.PartidaDeXadrez;
 import xadrez.PecasDeXadrez;
 import xadrez.PosicaoXadrez;
 
+import java.security.InvalidParameterException;
 import java.util.*;
 
 public class Main {
@@ -38,7 +39,11 @@ public class Main {
 
                 if (partidaDeXadrez.getPromocaoDoPeao() != null){
                     System.out.print("Entre com a letra da nova peça para promoção(B, C, R, Q): ");
-                    String tipo = sc.nextLine();
+                    String tipo = sc.nextLine().toUpperCase();
+                    while (!tipo.equals("B") && !tipo.equals("C") && !tipo.equals("R") && !tipo.equals("Q")){
+                        System.out.print("Valor invalido! Entre com a letra da nova peça para promoção(B, C, R, Q): ");
+                        tipo = sc.nextLine().toUpperCase();
+                    }
                     partidaDeXadrez.trocaPecaPromocao(tipo);
                 }
 
